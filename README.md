@@ -19,22 +19,6 @@ npm run dev
 # http://localhost:3000
 ```
 
-## 🏆 Pontuação das Features
-
-| Feature | Pontos | Status |
-|---------|--------|--------|
-| Projeto rodando localmente | 10 pts | ✅ |
-| Exibir temperatura atual | 20 pts | ✅ |
-| Exibir umidade e vento | 20 pts | ✅ |
-| Cards por cidade | 30 pts | ✅ |
-| Gráfico de histórico (Recharts) | 40 pts | ✅ |
-| UI responsiva com Tailwind | 10 pts | ✅ |
-| Cores dinâmicas por temperatura (bônus) | 20 pts | ✅ |
-| Busca por cidade (bônus) | 30 pts | ✅ |
-| **Deploy no Vercel** | **50 pts** | 🚀 Extra |
-
-**Total sem Deploy: 180 pts | Com Deploy: 230 pts**
-
 ## 🏗️ Arquitetura
 
 ```
@@ -62,24 +46,9 @@ clima-dashboard/
 └── .env.local.example       # Template de variáveis de ambiente
 ```
 
-## 🌐 Deploy no Vercel
-
-```bash
-# Instalar CLI do Vercel
-npm i -g vercel
-
-# Deploy
-vercel
-
-# Configurar variável de ambiente no painel:
-# INMET_TOKEN = seu_token
-```
 
 ## 🔌 API do INMET
 
 - **Base URL**: `https://apitempo.inmet.gov.br`
 - `GET /estacoes/T` — lista estações automáticas
 - `GET /estacao/dados/{codigo}` — dados de uma estação
-
-### Fallback: Open-Meteo
-Se o INMET estiver indisponível, a API Route usa automaticamente o **Open-Meteo** (sem token, 100% gratuito).
